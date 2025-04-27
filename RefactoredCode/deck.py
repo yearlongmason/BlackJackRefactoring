@@ -18,15 +18,15 @@ def make_deck():
 
 def make_card(suit, number):
     if number == 1: # If ace
-        return {'type':'Ace', 'value':11, 'display':'Ace of ' + suit}
+        return {'type':'Ace', 'value':11, 'display':f'Ace of {suit}'}
     elif number == 11: # If Jack
-        return {'type':'Face', 'value':10, 'display':'Jack of ' + suit}
+        return {'type':'Face', 'value':10, 'display':f'Jack of {suit}'}
     elif number == 12: # If queen
-        return {'type':'Face', 'value':10, 'display':'Queen of ' + suit}
+        return {'type':'Face', 'value':10, 'display':f'Queen of {suit}'}
     elif number == 13: # If king
-        return {'type':'Face', 'value':10, 'display':'King of ' + suit}
+        return {'type':'Face', 'value':10, 'display':f'King of {suit}'}
     else:
-        return {'type':'number', 'value': number, 'display':str(number)+' of ' + suit}
+        return {'type':'number', 'value': number, 'display':f'{number} of {suit}'}
 
 def shuffle_deck(deck):
     shuffled_deck = deck
